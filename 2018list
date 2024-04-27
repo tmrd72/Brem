@@ -1,43 +1,14 @@
-
-import os,random,sys,time
-os.system("pkg install espeak")
-os.system("clear")
-from os import system as _HERON_
-def lo(word):
-    heron = ["[\x1b[1;91m■\x1b[0m□□□□□□□□□]","[\x1b[1;92m■■\x1b[0m□□□□□□□□]", "[\x1b[1;93m■■■\x1b[0m□□□□□□□]", "[\x1b[1;94m■■■■\x1b[0m□□□□□□]", "[\x1b[1;95m■■■■■\x1b[0m□□□□□]", "[\x1b[1;96m■■■■■■\x1b[0m□□□□]", "[\x1b[1;97m■■■■■■■\x1b[0m□□□]", "[\x1b[1;98m■■■■■■■■\x1b[0m□□]", "[\x1b[1;99m■■■■■■■■■\x1b[0m□]", "[\x1b[1;910m■■■■■■■■■■\x1b[0m]"]
-    for i in range(5):
-        for x in range(len(heron)):
-            sys.stdout.write(('\r{}{}').format(str(word), heron[x]))
-            time.sleep(0.03)
-            sys.stdout.flush()
-lo(" \x1b[1;36m     Api İle Bağlantı Kuruluyor ...")
-os.system("clear")
-
-import os,random,sys,time
-os.system("pkg install espeak")
-os.system("clear")
-from os import system as _HERON_
-def lo(word):
-    heron = ["[\x1b[1;91m■\x1b[0m□□□□□□□□□]","[\x1b[1;92m■■\x1b[0m□□□□□□□□]", "[\x1b[1;93m■■■\x1b[0m□□□□□□□]", "[\x1b[1;94m■■■■\x1b[0m□□□□□□]", "[\x1b[1;95m■■■■■\x1b[0m□□□□□]", "[\x1b[1;96m■■■■■■\x1b[0m□□□□]", "[\x1b[1;97m■■■■■■■\x1b[0m□□□]", "[\x1b[1;98m■■■■■■■■\x1b[0m□□]", "[\x1b[1;99m■■■■■■■■■\x1b[0m□]", "[\x1b[1;910m■■■■■■■■■■\x1b[0m]"]
-    for i in range(5):
-        for x in range(len(heron)):
-            sys.stdout.write(('\r{}{}').format(str(word), heron[x]))
-            time.sleep(0.03)
-            sys.stdout.flush()
-lo(" \x1b[1;32m     Vip Api Acildi ...")
-os.system("clear")
 import requests
 from time import time
 from hashlib import md5
 from user_agent import generate_user_agent
 from random import randrange
 from threading import Thread
-G = '\033[1;32m'
 ids=[]
+
+F = '\033[1;32m'
 def get_id():
-  id=str(4426316653, 7407225345))
-
-
+  id=str(randrange(4426316653, 7407225345))
   if id not in ids:
     ids.append(id)
     return id
@@ -69,10 +40,10 @@ def get_username():
 }
       response = requests.post('https://www.instagram.com/graphql/query', headers=headers, data=data).json()
       username=response['data']['user']['username']
-      print(G + username )
-      with open('thomas.txt', 'a') as f:
-        f.write(  username + '\n')
+      print(F+ username)
+      with open('thomasgmail.txt', 'a') as f:
+        f.write(username + '\n')
     except:
-      print(' \033[2;31m İp Ban Yasaklandin ')
+      print()
 for i in range(100):
   Thread(target=get_username).start()
